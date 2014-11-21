@@ -1,8 +1,7 @@
 ## The first function, `makeCacheMatrix` creates a special "matrix", which is
 ## really a list containing functions to set & get the value of the passed matrix and to 
-## get and set the value of the inverse. It will cache the inverse value.
-
-## The second function `cacheSolve` will check if the inverse of the passed matrix was computed
+## get and set the value of the inverse. It will cache the passed matrix & its inverse value.
+## The second function, `cacheSolve` will check if the inverse of the passed matrix was computed
 ## previously and if so, will returns a cached copy of the inverse
 ##  else it computes the inverse of the passed matrix and caches the value. 
 
@@ -31,9 +30,9 @@ makeCacheMatrix <- function(x = matrix()) {
         getinvmat = getinvmat)
 }
 
-## The following function calculates the nverse of the special "matix"
+## The following function calculates the Inverse of the special "matrix"
 ## created with the above function. However, it first checks to see if the
-## inverse matrix has already been calculated. If so, it `get`s the inverse matrix from the
+## inverse matrix has already been calculated. If so, it get`s the inverse matrix from the
 ## cache and skips the computation. Otherwise, it calculates the inverse of
 ## the data and sets the value of the inverse in the cache via the `setinvmat`
 ## function.
